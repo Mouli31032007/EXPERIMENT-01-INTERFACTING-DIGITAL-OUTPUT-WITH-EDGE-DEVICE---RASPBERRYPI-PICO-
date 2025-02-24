@@ -1,8 +1,8 @@
 # EXPERIMENT-01-INTERFACTING-DIGITAL-OUTPUT-WITH-EDGE-DEVICE---(RASPBERRYPI-PICO)
-### NAME 
-### DEPARTMENT 
-### ROLL NO 
-### DATE OF EXPERIMENT 
+### NAME : S.MOULIDHARAN
+### DEPARTMENT : AIML
+### ROLL NO : 212224240095
+### DATE OF EXPERIMENT : 24/02/2025
 
 ### AIM
 To interface a digital output device (LED) with the Raspberry Pi Pico and control it using MicroPython.
@@ -41,23 +41,67 @@ Connect the cathode (shorter leg) of the LED to GND (ground).
 
 ## PROGRAM (MicroPython)
 ```
+from machine import Pin
+from utime import sleep
+led1=Pin(0,Pin.OUT)
 
 
- 
-
-
-
- 
+while True:
+    led1.toggle()
+    sleep(0.5)
 ````
+```
+from machine import Pin
+from utime import sleep
+led1=Pin(0,Pin.OUT)
+led2=Pin(1,Pin.OUT)
+led3=Pin(2,Pin.OUT)
+
+while True:
+    led1.toggle()
+    sleep(0.5)
+    sleep(0.5)
+    led2.toggle()
+    sleep(0.5)
+    led3.toggle()
+    sleep(0.5)
+```
+```
+from machine import Pin
+from utime import sleep
+led1=Pin(0,Pin.OUT)
+led2=Pin(1,Pin.OUT)
+led3=Pin(2,Pin.OUT)
+buzz=Pin(3,Pin.OUT)
+while True:
+    led1.toggle()
+    sleep(0.5)
+    buzz.toggle()
+    sleep(0.5)
+    led2.toggle()
+    sleep(0.5)
+    buzz.toggle()
+    sleep(0.5)
+    led3.toggle()
+    sleep(0.5)
+    buzz.toggle()
+    sleep(0.5)
+```
 
 ### OUPUT  
 
 
 # FIGURE -02 ADD TITILE HERE 
+![COMPUT](https://github.com/user-attachments/assets/216aa519-148f-43be-89e6-be3801054231)
+
 
 #  FIGURE -03 ADD TITILE HERE 
+![Screenshot 2025-02-24 113949](https://github.com/user-attachments/assets/bcd35521-182e-4daa-990d-01c8a644f5c1)
+
 
 # FIGURE -04 ADD TITLE HERE 
+![EDGE](https://github.com/user-attachments/assets/71a65bbc-45d3-44ca-9248-2c5131fb9e1d)
+
 
 
  
